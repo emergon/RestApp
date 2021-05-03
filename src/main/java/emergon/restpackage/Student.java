@@ -1,10 +1,12 @@
 package emergon.restpackage;
 
 import java.time.LocalDate;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 public class Student {
     private String name;
     private int age;
+    @XmlJavaTypeAdapter(LocalDateAdapter.class)
     private LocalDate dob;
 
     public Student() {
